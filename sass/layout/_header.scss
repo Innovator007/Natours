@@ -1,0 +1,43 @@
+.header {
+
+	height: 95vh;
+	background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)) , url(../img/hero-small.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+	-webkit-clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+
+	@media (min-resolution: 192dpi) and (min-width: 600px) {
+		background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)) , url(../img/hero.jpg);
+	}
+
+	@media (min-width: 1200px) {
+		background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)) , url(../img/hero.jpg);
+	}
+
+
+	@include respond(ph) {
+		clip-path: polygon(0 0,100% 0,100% 85vh,0 100%);
+		-webkit-clip-path: polygon(0 0,100% 0,100% 85vh,0 100%);		
+	}
+
+
+	.logo-box {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+	}
+
+	.logo {
+		height: 35px;
+	}
+
+	.text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+}

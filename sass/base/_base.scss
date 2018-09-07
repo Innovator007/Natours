@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; //1rem=10px 10/16 =0.625
+
+
+	@include respond(tbland) {
+		font-size: 56.25%;	//1rem=9px
+	}
+
+	@include respond(tbport) {
+		font-size: 50%;	//1rem=8px
+	}
+
+	@include respond(bgdesk) {
+		font-size: 75%;		//1rem=12px
+	}
+
+}
+
+body {
+	font-family: "Lato",sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: $color-grey-dark;
+	padding: 3rem;
+
+	@include respond(tbport) {
+		padding: 0;
+	}
+
+}
